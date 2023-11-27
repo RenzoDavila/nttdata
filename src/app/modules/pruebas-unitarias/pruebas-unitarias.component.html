@@ -1,0 +1,88 @@
+<div class="px-4 text-center">
+  <h1 class="display-5 fw-bold">Pruebas Unitarias para un Escenario Real</h1>
+</div>
+
+
+<div class="row mt-5 align-items-md-stretch">
+  <h2 class="mb-3"><u>Ejemplo</u></h2>
+
+  <table class="table mt-4 mb-5">
+    <thead class="table-light">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.first_name}}</td>
+        <td>{{user.last_name}}</td>
+        <td>{{user.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="row mt-5 align-items-md-stretch">
+  <h2 class="mb-3"><u>Explicación</u></h2>
+
+  <div class="col-md-8">
+    <div class="h-100 p-5 pb-0 text-bg-dark">
+      <img class="image pb-5" src="/assets/d4/1.png" alt="image">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="h-100 p-5 bg-light border rounded-3 d-flex align-items-center">
+      <p class="display-6">Se crea un módulo nuevo con el archivo "spec".</p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="h-100 p-5 bg-light border rounded-3 d-flex align-items-center">
+      <p class="display-6">Agregamos un mock del servicio (mockedPrincipalService) y creamos un objeto (UserPruebasUnitariasData) que va a mostar la respuesta esperada </p>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="h-100 p-5 pb-0 text-bg-dark">
+      <img class="image pb-5" src="/assets/d4/2.png" alt="image">
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <div class="h-100 p-5 pb-0 text-bg-dark">
+      <img class="image pb-5" src="/assets/d4/3.png" alt="image">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="h-100 p-5 bg-light border rounded-3 d-flex align-items-center">
+      <p class="display-6">Colocamos un título relacionado con las pruebas que vamos a hacer, y definimos el uso del mock en los providers.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="h-100 p-5 bg-light border rounded-3 d-flex align-items-center">
+      <p class="display-6">Utilizamos la sintaxis "it" para definir las pruebas a realizar en esto dos casos que retorne un objeto igual a "UserPruebasUnitariasData" y que al existir un error el array "user" se mantenga vacio.</p>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="h-100 p-5 pb-0 text-bg-dark">
+      <img class="image pb-5" src="/assets/d4/4.png" alt="image">
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <div class="h-100 p-5 pb-0 text-bg-dark">
+      <img class="image pb-5" src="/assets/d4/5.png" alt="image">
+      <img class="image pb-5" src="/assets/d4/6.png" alt="image">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="h-100 p-5 bg-light border rounded-3 d-flex align-items-center">
+      <p class="display-6">El ejecutar "ng test" podemos ver que las dos pruebas realizadas a nuestro servicio retornaron los resultados esperados.</p>
+    </div>
+  </div>
+
+</div>

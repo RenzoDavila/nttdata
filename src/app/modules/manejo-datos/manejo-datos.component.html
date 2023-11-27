@@ -1,0 +1,104 @@
+<div class="px-4 text-center">
+  <h1 class="display-5 fw-bold">Mejoras en la Navegación</h1>
+</div>
+
+<div class="row mt-5 align-items-md-stretch">
+  <h2 class="mb-3"><u>Ejemplo</u></h2>
+  <form class="needs-validation" novalidate="">
+    <div class="row g-3 d-flex align-items-center">
+      <div class="col-sm-4 d">
+        <label for="userId" class="form-label">Colocar ID (un ID mayor a 12 da error 404)</label>
+        <input [(ngModel)]="userId" type="number" class="form-control" onkeypress="return event.charCode>=48 && event.charCode<=57" name="userId">
+        <div class="invalid-feedback">
+          Valid first name is required.
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="save-info" [(ngModel)]="error" name="error">
+          <label class="form-check-label" for="error">mostrar error 400</label>
+        </div>
+      </div>
+
+      <div class="col-sm-2">
+        <button class="w-100 btn btn-secondary btn-lg" type="submit" [disabled]="!userId || disableSubmit" (click)="submit()">Enviar</button>
+      </div>
+
+      <div class="col-sm-6">
+        <ul class="list-group list-users" >
+          <li class="list-group-item active" aria-current="true">Lista de usuarios</li>
+          <span *ngIf="users1$ | async as users1"><li class="list-group-item" *ngFor="let u1 of users1">{{u1.id}} - {{u1.first_name}}</li></span>
+          <span *ngIf="users2$ | async as users2"><li class="list-group-item" *ngFor="let u2 of users2">{{u2.id}} - {{u2.first_name}}</li></span>
+        </ul>
+      </div>
+    </div>
+  </form>
+
+  <table class="table mt-4 mb-5">
+    <thead class="table-light">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="user$ | async as user">
+      <tr *ngFor="let u of user">
+        <td>{{u.first_name}}</td>
+        <td>{{u.last_name}}</td>
+        <td>{{u.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="row mt-5 align-items-md-stretch">
+  <h2 class="mb-3"><u>Explicación</u></h2>
+
+  <div class="col-md-4">
+    <div class="h-100 p-5 bg-light border rounded-3 d-flex align-items-center">
+      <p class="display-6">Se utilizo "Observable" de "RxJS" para hacer un llamado HTTP al endpoint proporcionado por <a href="https://reqres.in/" target="_blank">reqres.in</a></p>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="h-100 p-5 pb-0 text-bg-dark">
+      <img class="image pb-5" src="/assets/d1/1.png" alt="image">
+      <img class="image pb-5" src="/assets/d1/2.png" alt="image">
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <div class="h-100 p-5 pb-0 text-bg-dark">
+      <img class="image pb-5" src="/assets/d1/3.png" alt="image">
+      <img class="image pb-5" src="/assets/d1/4.png" alt="image">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="h-100 p-5 bg-light border rounded-3 d-flex align-items-center">
+      <p class="display-6">Se transformo la respuesta mediante el uso de "map" y una interfaz</p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="h-100 p-5 bg-light border rounded-3 d-flex align-items-center">
+      <p class="display-6">Se muestra con el uso de un observable que usa la interfaz creada</p>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="h-100 p-5 pb-0 text-bg-dark">
+      <img class="image pb-5" src="/assets/d1/5.png" alt="image">
+      <img class="image pb-5" src="/assets/d1/6.png" alt="image">
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <div class="h-100 p-5 pb-0 text-bg-dark">
+      <img class="image pb-5" src="/assets/d1/7.png" alt="image">
+      <img class="image pb-5" src="/assets/d1/8.png" alt="image">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="h-100 p-5 bg-light border rounded-3 d-flex align-items-center">
+      <p class="display-6">Manejo de errores mediante el uso de interceptors</p>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      <span class="fs-4">Desafío Técnico NTTDATA</span>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a [routerLink]="['']" class="nav-link" [ngClass]="{'active' : router.url === '/'}" aria-current="page">Inicio</a></li>
+      <li class="nav-item"><a [routerLink]="['manejo-datos']" class="nav-link" [ngClass]="{'active' : router.url === '/manejo-datos'}">Desafío 1</a></li>
+      <li class="nav-item"><a [routerLink]="['mejoras-navegacion']" class="nav-link" [ngClass]="{'active' : router.url === '/mejoras-navegacion'}">Desafío 2</a></li>
+      <li class="nav-item"><a [routerLink]="['estrategias-optimizacion']" class="nav-link" [ngClass]="{'active' : router.url === '/estrategias-optimizacion'}">Desafío 3</a></li>
+      <li class="nav-item"><a [routerLink]="['pruebas-unitarias']" class="nav-link" [ngClass]="{'active' : router.url === '/pruebas-unitarias'}">Desafío 4</a></li>
+    </ul>
+  </header>
+</div>

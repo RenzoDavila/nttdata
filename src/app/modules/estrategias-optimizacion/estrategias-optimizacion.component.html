@@ -1,0 +1,47 @@
+<div class="px-4 text-center">
+  <h1 class="display-5 fw-bold">Estrategias Prácticas de Optimización</h1>
+</div>
+
+<div class="row align-items-md-stretch">
+
+  <h2 class="mb-3 mt-5"><u>Build para producción</u></h2>
+  <div class="col-md-5">
+    <div class="h-100 p-5 bg-light border rounded-3 d-flex align-items-center">
+      <p class="display-6">Al colocar el comando "ng build --configuration production" indicamos a Angular que se optimice para que el tamaño de los archivos al compilador sea mucho menor y por lo tanto la carga será más rápida, a su vez si agregamos "--aot" indicamos que revise el código para optimizarlo.</p>
+    </div>
+  </div>
+  <div class="col-md-7">
+    <div class="h-100 p-5 pb-0 text-bg-dark">
+      <img class="image pb-5" src="/assets/d3/1.png" alt="image">
+      <img class="image pb-5" src="/assets/d3/2.png" alt="image">
+    </div>
+  </div>
+
+  <h2 class="mb-3 mt-5"><u>Refactorización de componentes y funciones</u></h2>
+  <div class="col-md-7">
+    <div class="h-100 p-5 pb-0 text-bg-dark">
+      <img class="image pb-5" src="/assets/d3/3.png" alt="image">
+      <img class="image pb-5" src="/assets/d3/4.png" alt="image">
+      <img class="image pb-5" src="/assets/d3/5.png" alt="image">
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="h-100 p-5 bg-light border rounded-3 d-flex align-items-center">
+      <p class="display-6">Algo completamente necesario en Angular es crear módulos/componentes que nos permitan reutilizar las vistas y funciones a lo largo de la aplicación, esto hace que nuestro código disminuya notablemente y permite que el mantenimiento de la aplicación sea mil veces más sencillo.</p>
+    </div>
+  </div>
+
+  <h2 class="mb-3 mt-5"><u>Tubería asíncrona</u></h2>
+  <div class="col-md-5">
+    <div class="h-100 p-5 bg-light border rounded-3 d-flex align-items-center">
+      <p class="display-6">Cuando hacemos uso de observables, al no hacer uso de "unsubscribe" podemos provocar pérdidas de memoria, pero con el uso de "pipe async" esto se simplifica dado de que el mismo se suscribe y se des-suscribe de los servicios automáticamente y como un extra tenemos un código más limpio</p>
+    </div>
+  </div>
+  <div class="col-md-7">
+    <div class="h-100 p-5 pb-0 text-bg-dark">
+      <img class="image pb-5" src="/assets/d3/6.png" alt="image">
+      <img class="image pb-5" src="/assets/d3/7.png" alt="image">
+    </div>
+  </div>
+
+</div>
